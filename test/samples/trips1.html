@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Trips | Citi Bike</title>
+	
+	<meta name="title" content="Citi Bike">
+	<meta name="description" content="Your bike sharing system in New York City">
+  
+	<!-- Included CSS Files (Compressed) -->
+	<link href="/assets/css/foundation3/foundation.min.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/foundation3/app.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox-buttons.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox-thumbs.css?c=-62169966000" media="all" rel="stylesheet"/>
+		
+	<!-- Bikeshare CSS Files -->
+	<link href="/assets/css/nyc/fonts.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/nyc/nyc.css?c=-62169966000" media="all" rel="stylesheet"/>
+		
+	<!-- Font Awesome Icon set -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	
+	<!-- Modernizr -->
+	<script src="/assets/js/foundation3/modernizr.foundation.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- Print -->
+	<link rel="stylesheet" href="/assets/css/nyc/print.css" type="text/css" media="print" />
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!--[if gte IE 9]>
+		<style type="text/css"> .gradient { filter: none; } </style>
+	<![endif]-->
+	
+	<!--[if IE]>
+	     <style type="text/css">
+	         .timer { display: none !important; }
+	         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+	    </style>
+	<![endif]-->
+	
+	<link rel="shortcut icon" href="/assets/images/favicon.ico">
+	
+	<!-- Fuel Blog -->
+		
+    <!-- This style block and the following script block prevent Cross Frame Scripting -->
+    <style>
+        html{
+        display : none ;
+        visibility : hidden ;
+        }
+    </style>
+    <script>
+        if ( self == top ) {
+            document.documentElement.style.display = 'block' ;
+            document.documentElement.style.visibility = 'visible' ;
+        } else {
+            top.location=self.location;
+        }
+	</script>
+	
+</head>
+
+<body class="<!--__FUEL_MARKER__0-->Body Class">
+
+	<!-- Header -->
+	<header id="header" class="gradient hide-for-small">									
+		
+		<div id="header-bg-right" class="gradient-header-blue gradient"></div>
+					
+		<section id="header-content" class="row gradient">					
+									
+			<div class="two columns">
+				
+				<!-- Logo -->
+				<a id="logo" href="https://www.citibikenyc.com/">
+					<img src="/assets/images/header-logo.png" alt="Citi Bike - Operated by NYC Bike Share" />								
+				</a>
+				
+			</div>
+						
+			<div class="ten columns">
+				
+				<div class="row">
+					<div class="twelve columns">
+						
+						<!-- Secondary Navigation -->
+						<div id="subnav">
+							
+							<nav id="secondary" class="horizontal">                 		
+				        		
+<ul>
+	<li class="first"><a href="https://www.citibikenyc.com/store" title="Gift Store">Gift Store</a></li>
+	<li><a href="https://www.citibikenyc.com/about" title="About">About</a></li>
+	<li><a href="https://www.citibikenyc.com/faq" title="FAQ">FAQ</a></li>
+	<li><a href="https://www.citibikenyc.com/get-the-app" title="Get The App">Get The App</a></li>
+	<li><a href="https://www.citibikenyc.com/meet-the-bike" title="Meet The Bike">Meet The Bike</a></li>
+	<li><a href="http://citibikeblog.tumblr.com/"target="_blank" title="Blog">Blog</a></li>
+	<li><a href="https://www.citibikenyc.com/events" title="Events">Events</a></li>
+	<li><a href="https://www.citibikenyc.com/jobs" title="Jobs">Jobs</a></li>
+	<li><a href="https://www.citibikenyc.com/system-data" title="System Data">System Data</a></li>
+	<li class="last"><a href="https://www.citibikenyc.com/contact" title="Contact">Contact</a></li>
+</ul>
+	        			        		   	                		    		               	            
+				            </nav>
+				            
+				            <nav id="signup-member" class="horizontal">
+				            	<ul>
+				            						            			<li class="active"><a href="https://www.citibikenyc.com/member/profile">Profile</a></li>
+				        				<li><a href="https://www.citibikenyc.com/login/logout">Logout</a></li>		            					            			
+				        			    					    								                	
+				            	</ul>  
+				            </nav>
+				            
+						</div>
+								
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="twelve columns">
+						
+						<!-- Main Navigation -->
+				        <div id="mainnav">
+				        	
+				        	<nav id="primary" class="horizontal margin-right--4 margin-top--1">    		
+					        	
+<ul>
+	<li class="first"><a href="https://www.citibikenyc.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li><a href="https://www.citibikenyc.com/stations" title="Station Map">Station Map</a></li>
+	<li><a href="https://www.citibikenyc.com/pricing" title="Pricing">Pricing</a></li>
+	<li><a href="https://www.citibikenyc.com/riding-tips" title="Riding Tips">Riding Tips</a></li>
+	<li class="last"><a href="https://www.citibikenyc.com/resources" title="Resources">Resources</a></li>
+</ul>
+     		        	            
+					        </nav>
+					        
+				        	<!-- Social Media -->  
+				        	<nav id="social" class="horizontal">
+				        		<ul>
+				        			<li>
+				        				<a id="facebook" href="http://facebook.com/CitiBikeNYC" target="_blank" title="Find Us on Facebook"></a>
+				        			</li>
+				        			<li>
+				        				<a id="twitter" href="http://twitter.com/#!/CitiBikeNYC" target="_blank" title="Follow Us On Twitter!"></a>	
+				        			</li>	        			
+				        		</ul>
+				        	</nav>   
+				    		 
+				        </div>
+						
+					</div>
+				</div>				            		         			      							
+		        
+			</div>
+		
+		</section>	         									
+
+	</header>	
+	
+	<!-- Header (Small) -->
+	<header id="header-small" class="show-for-small padding-10" style="background: #005DAB; ">		
+		<div class="row margin-bottom-10">
+			<div class="gutter-5">						
+				<div class="mobile-one column">
+					<div class="gutter">
+						<a href="https://www.citibikenyc.com/">
+							<img src="/assets/images/citibike-logo.png" alt="Citi Bike - Operated by NYC Bike Share" />								
+						</a>
+						<ul class="inline" style="position:relative; top:5px; left:15px; ">
+							<li>
+								<a id="facebook" href="http://facebook.com/CitiBikeNYC" target="_blank" title="Find Us on Facebook">
+									<img src="/assets/images/apps/facebook.png" />		    					
+								</a>
+							</li>
+							<li>
+								<a id="twitter" href="http://twitter.com/#!/CitiBikeNYC" target="_blank" title="Follow Us On Twitter!">
+									<img src="/assets/images/apps/twitter.png" />
+								</a>	
+							</li>	        			
+						</ul>
+					</div>				
+				</div>
+				<div class="mobile-three column">
+					<div class="gutter">
+						<nav>                 								
+							<ul class="button-group right">
+				        						        			<li class="active"><a class="tiny button radius" href="https://www.citibikenyc.com/member/profile">Profile</a></li>
+				    				<li><a class="tiny button" href="https://www.citibikenyc.com/login/logout">Logout</a></li>		            					            			
+				    			    		    				
+				            	<li id="join" ><a data-click-tracker="nav-mobile-signup" class="tiny button radius" href="https://www.citibikenyc.com/signup">Sign Up</a></li>
+				        	</ul>		        	     			        		   	                		    		               	           
+				        </nav>
+					</div>						       
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="gutter-10">
+				<div class="mobile-two columns">
+					<div class="gutter">
+						<nav id="primary-small">
+				        	
+<ul>
+	<li class="first medium button"><a href="https://www.citibikenyc.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/stations" title="Station Map">Station Map</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/pricing" title="Pricing">Pricing</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/riding-tips" title="Riding Tips">Riding Tips</a></li>
+	<li class="last medium button"><a href="https://www.citibikenyc.com/resources" title="Resources">Resources</a></li>
+</ul>
+     		        	            
+				        </nav>
+					</div>					
+				</div>
+				<div class="mobile-two columns">
+					<div class="gutter">
+						<nav id="secondary-small">
+							
+<ul>
+	<li class="first tiny button"><a href="https://www.citibikenyc.com/store" title="Gift Store">Gift Store</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/about" title="About">About</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/faq" title="FAQ">FAQ</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/get-the-app" title="Get The App">Get The App</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/meet-the-bike" title="Meet The Bike">Meet The Bike</a></li>
+	<li class="tiny button"><a href="http://citibikeblog.tumblr.com/"target="_blank" title="Blog">Blog</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/events" title="Events">Events</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/jobs" title="Jobs">Jobs</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/system-data" title="System Data">System Data</a></li>
+	<li class="last tiny button"><a href="https://www.citibikenyc.com/contact" title="Contact">Contact</a></li>
+</ul>
+			
+						</nav>
+					</div>					
+				</div>
+			</div>					
+		</div>
+	</header>			<section class="row padding-top-20">
+	<div class="twelve columns centered text-center">
+		<nav id="member" class="horizontal margin-bottom-20"> 
+		   <ul class="button-group">
+                <li ><a class="button" href="https://www.citibikenyc.com/member/profile">Profile</a></li>                            
+                <li ><a class="button" href="https://www.citibikenyc.com/member/billing">Billing</a></li>
+                <li ><a class="button" href="https://www.citibikenyc.com/member/payments">Payments</a></li>
+                <li  class="active"><a class="button" href="https://www.citibikenyc.com/member/trips">Trips</a></li>                           
+                <li ><a class="button" href="https://www.citibikenyc.com/member/activate_bike_key">Bike Key</a></li>                                        
+            </ul>          			        		   	                		    		               	            
+		</nav>
+	</div>	
+</section>
+<section id="content" class="row margin-bottom-30">
+	<div class="twelve columns centered">
+
+        
+            <!-- Initialize Pagination -->
+                
+            <div class="row">
+              <div class="seven mobile-two columns"><h2>July 01, 2014 - July 30, 2014</h2></div>
+              <div class="five mobile-two columns text-right"><h2>Trips: 26 (304 Total)</h1></div>
+            </div>
+    
+            <!-- Trips Table -->
+            <table id="tripTable">     
+                <thead>
+                    <tr>
+                        <th>Trip ID</th>
+                        <th>Start Station</th>
+                        <th>Start Time</th>
+                        <th>End Station</th>
+                        <th>End Time</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <!-- To use the data attributes below, check out the pages below. 
+                         Also please note that the hyphenated attribute name becomes camel-cased: data-start-station-id to startStationId:
+                          - http://api.jquery.com/data/#data-html5
+                          - http://ejohn.org/blog/html-5-data-attributes/
+                          - http://www.w3.org/html/wg/drafts/html/master/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
+                         -->  
+                    
+                                
+                            <tr class="trip" id="trip-13150976"
+                                data-start-station-id="151" 
+                                data-start-timestamp="1406760278" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1406761369" 
+                                data-duration-seconds="1091" >
+                                <td>13150976</td>
+                                <td>Cleveland Pl & Spring St</td>
+                                <td>7/30/14 6:44:38 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/30/14 7:02:49 PM</td>
+                                <td>18m 11s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-13119944"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1406723440" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406724574" 
+                                data-duration-seconds="1134" >
+                                <td>13119944</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/30/14 8:30:40 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/30/14 8:49:34 AM</td>
+                                <td>18m 54s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-13090745"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1406667582" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1406668780" 
+                                data-duration-seconds="1198" >
+                                <td>13090745</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/29/14 4:59:42 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/29/14 5:19:40 PM</td>
+                                <td>19m 58s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-13068456"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1406636296" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406637455" 
+                                data-duration-seconds="1159" >
+                                <td>13068456</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/29/14 8:18:16 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/29/14 8:37:35 AM</td>
+                                <td>19m 19s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-13056145"
+                                data-start-station-id="3002" 
+                                data-start-timestamp="1406593280" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406593816" 
+                                data-duration-seconds="536" >
+                                <td>13056145</td>
+                                <td>South End Ave & Liberty St</td>
+                                <td>7/28/14 8:21:20 PM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/28/14 8:30:16 PM</td>
+                                <td>8m 56s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-13042210"
+                                data-start-station-id="377" 
+                                data-start-timestamp="1406581987" 
+                                data-end-station-id="3002" 
+                                data-end-timestamp="1406582685" 
+                                data-duration-seconds="698" >
+                                <td>13042210</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/28/14 5:13:07 PM</td>
+                                <td>South End Ave & Liberty St</td>
+                                <td>7/28/14 5:24:45 PM</td>
+                                <td>11m 38s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12875807"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1406234002" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1406235002" 
+                                data-duration-seconds="1000" >
+                                <td>12875807</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/24/14 4:33:22 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/24/14 4:50:02 PM</td>
+                                <td>16m 40s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12854731"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1406203202" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406204296" 
+                                data-duration-seconds="1094" >
+                                <td>12854731</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/24/14 8:00:02 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/24/14 8:18:16 AM</td>
+                                <td>18m 14s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12809435"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1406117337" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406118360" 
+                                data-duration-seconds="1023" >
+                                <td>12809435</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/23/14 8:08:57 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/23/14 8:26:00 AM</td>
+                                <td>17m 3s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12759748"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1406031012" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1406032213" 
+                                data-duration-seconds="1201" >
+                                <td>12759748</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/22/14 8:10:12 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/22/14 8:30:13 AM</td>
+                                <td>20m 1s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12750034"
+                                data-start-station-id="128" 
+                                data-start-timestamp="1405992105" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1405993059" 
+                                data-duration-seconds="954" >
+                                <td>12750034</td>
+                                <td>MacDougal St & Prince St</td>
+                                <td>7/21/14 9:21:45 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/21/14 9:37:39 PM</td>
+                                <td>15m 54s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12749032"
+                                data-start-station-id="417" 
+                                data-start-timestamp="1405990407" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1405990899" 
+                                data-duration-seconds="492" >
+                                <td>12749032</td>
+                                <td>Barclay St & Church St</td>
+                                <td>7/21/14 8:53:27 PM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/21/14 9:01:39 PM</td>
+                                <td>8m 12s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12710432"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1405943854" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1405944937" 
+                                data-duration-seconds="1083" >
+                                <td>12710432</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/21/14 7:57:34 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/21/14 8:15:37 AM</td>
+                                <td>18m 3s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12618752"
+                                data-start-station-id="128" 
+                                data-start-timestamp="1405722630" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1405723581" 
+                                data-duration-seconds="951" >
+                                <td>12618752</td>
+                                <td>MacDougal St & Prince St</td>
+                                <td>7/18/14 6:30:30 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/18/14 6:46:21 PM</td>
+                                <td>15m 51s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12586607"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1405684701" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1405685747" 
+                                data-duration-seconds="1046" >
+                                <td>12586607</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/18/14 7:58:21 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/18/14 8:15:47 AM</td>
+                                <td>17m 26s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12558173"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1405629330" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1405630442" 
+                                data-duration-seconds="1112" >
+                                <td>12558173</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/17/14 4:35:30 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/17/14 4:54:02 PM</td>
+                                <td>18m 32s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12536130"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1405598406" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1405599510" 
+                                data-duration-seconds="1104" >
+                                <td>12536130</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/17/14 8:00:06 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/17/14 8:18:30 AM</td>
+                                <td>18m 24s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12516330"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1405549542" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1405550527" 
+                                data-duration-seconds="985" >
+                                <td>12516330</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/16/14 6:25:42 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/16/14 6:42:07 PM</td>
+                                <td>16m 25s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12473326"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1405456599" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1405457737" 
+                                data-duration-seconds="1138" >
+                                <td>12473326</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/15/14 4:36:39 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/15/14 4:55:37 PM</td>
+                                <td>18m 58s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12456712"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1405425446" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1405426552" 
+                                data-duration-seconds="1106" >
+                                <td>12456712</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/15/14 7:57:26 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/15/14 8:15:52 AM</td>
+                                <td>18m 26s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12243945"
+                                data-start-station-id="368" 
+                                data-start-timestamp="1404947269" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1404948116" 
+                                data-duration-seconds="847" >
+                                <td>12243945</td>
+                                <td>Carmine St & 6 Ave</td>
+                                <td>7/9/14 7:07:49 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/9/14 7:21:56 PM</td>
+                                <td>14m 7s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12215163"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1404909090" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1404910254" 
+                                data-duration-seconds="1164" >
+                                <td>12215163</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/9/14 8:31:30 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/9/14 8:50:54 AM</td>
+                                <td>19m 24s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12168045"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1404819309" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1404820306" 
+                                data-duration-seconds="997" >
+                                <td>12168045</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/8/14 7:35:09 AM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/8/14 7:51:46 AM</td>
+                                <td>16m 37s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12160747"
+                                data-start-station-id="2004" 
+                                data-start-timestamp="1404781147" 
+                                data-end-station-id="517" 
+                                data-end-timestamp="1404782190" 
+                                data-duration-seconds="1043" >
+                                <td>12160747</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/7/14 8:59:07 PM</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/7/14 9:16:30 PM</td>
+                                <td>17m 23s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12159606"
+                                data-start-station-id="426" 
+                                data-start-timestamp="1404779485" 
+                                data-end-station-id="377" 
+                                data-end-timestamp="1404779765" 
+                                data-duration-seconds="280" >
+                                <td>12159606</td>
+                                <td>West St & Chambers St</td>
+                                <td>7/7/14 8:31:25 PM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>7/7/14 8:36:05 PM</td>
+                                <td>4m 40s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-12129812"
+                                data-start-station-id="517" 
+                                data-start-timestamp="1404738190" 
+                                data-end-station-id="2004" 
+                                data-end-timestamp="1404739545" 
+                                data-duration-seconds="1355" >
+                                <td>12129812</td>
+                                <td>E 41 St & Madison Ave</td>
+                                <td>7/7/14 9:03:10 AM</td>
+                                <td>6 Ave & Broome St</td>
+                                <td>7/7/14 9:25:45 AM</td>
+                                <td>22m 35s</td>
+                            </tr>
+        
+                        
+                                    </tbody>        
+            </table>
+            <!-- Pagination -->
+                            <nav class="pagination">Page: &nbsp;<strong>1</strong>&nbsp;<a href="https://www.citibikenyc.com/member/trips/2" data-ci-pagination-page="2">2</a>&nbsp;<a href="https://www.citibikenyc.com/member/trips/3" data-ci-pagination-page="3">3</a>&nbsp;<a href="https://www.citibikenyc.com/member/trips/2" data-ci-pagination-page="2">&gt;</a>&nbsp;&nbsp;<a href="https://www.citibikenyc.com/member/trips/15" data-ci-pagination-page="15">Last &rsaquo;</a></nav>
+                                                    
+            
+        
+	</div>
+</section>	    		    
+
+	<!-- Footer -->
+	<footer id="footer" class="row">
+	    	
+    	<hr id="divider" />
+    	
+    	<section id="copyright" class="eight columns centered">  
+    		<!--__FUEL_MARKER__1--><p>Use of this Website constitutes acceptance of the website <a href="/assets/pdf/terms-of-use.pdf">Terms of Use Agreement</a> and <a href="https://www.citibikenyc.com/privacy">Privacy Policy</a>.
+<p>
+	© Copyright 2013 - 2014 NYC Bike Share, LLC. All rights reserved.<br />
+	Citi, Citi with Arc Design and Citi Bike are registered service marks of Citigroup, Inc
+</p>              	            	
+        </section>
+	        
+	</footer>
+	
+	<!-- Miscellanous content like modal dialogs -->
+	
+    <!-- Current Environment: production -->
+
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write("<script src='/assets/js/foundation3/jquery.js'>\x3C/script>")</script>
+	
+	<!-- Foundation Javascript -->
+	<script src="/assets/js/foundation3/foundation.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/foundation3/app.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- jQuery Plugins that only load where appropriate -->
+		
+	<!-- Auto-Load any Javascript specific to a page by its URL only if it exists -->
+	
+    <!-- Load the signup JS if we're on the renewal page -->
+        
+        	
+	<!-- Final custom JS Calls (keep this below all other javascript files) -->
+	<script src="/assets/js/css_browser_selector.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.cookie.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.scrollTo.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.localScroll.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/nyc.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/jquery.fancybox.pack.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-media.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-thumbs.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- Analytics -->
+	<script src="/assets/js/google-analytics.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	 
+
+</body>
+</html>

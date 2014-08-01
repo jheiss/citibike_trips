@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = CitibikeTrips::VERSION
   spec.authors       = ["Jason Heiss"]
   spec.email         = ["jheiss@aput.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Fetches your Citi Bike trip data}
+  spec.description   = %q{}
+  spec.homepage      = "https://github.com/jheiss/citibike_trips"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency 'mocha'
+  spec.add_dependency 'highline'
+  spec.add_dependency 'mechanize'
 end

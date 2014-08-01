@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Trips | Citi Bike</title>
+	
+	<meta name="title" content="Citi Bike">
+	<meta name="description" content="Your bike sharing system in New York City">
+  
+	<!-- Included CSS Files (Compressed) -->
+	<link href="/assets/css/foundation3/foundation.min.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/foundation3/app.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox-buttons.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/fancybox/jquery.fancybox-thumbs.css?c=-62169966000" media="all" rel="stylesheet"/>
+		
+	<!-- Bikeshare CSS Files -->
+	<link href="/assets/css/nyc/fonts.css?c=-62169966000" media="all" rel="stylesheet"/>
+	<link href="/assets/css/nyc/nyc.css?c=-62169966000" media="all" rel="stylesheet"/>
+		
+	<!-- Font Awesome Icon set -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	
+	<!-- Modernizr -->
+	<script src="/assets/js/foundation3/modernizr.foundation.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- Print -->
+	<link rel="stylesheet" href="/assets/css/nyc/print.css" type="text/css" media="print" />
+
+	
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!--[if gte IE 9]>
+		<style type="text/css"> .gradient { filter: none; } </style>
+	<![endif]-->
+	
+	<!--[if IE]>
+	     <style type="text/css">
+	         .timer { display: none !important; }
+	         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+	    </style>
+	<![endif]-->
+	
+	<link rel="shortcut icon" href="/assets/images/favicon.ico">
+	
+	<!-- Fuel Blog -->
+		
+    <!-- This style block and the following script block prevent Cross Frame Scripting -->
+    <style>
+        html{
+        display : none ;
+        visibility : hidden ;
+        }
+    </style>
+    <script>
+        if ( self == top ) {
+            document.documentElement.style.display = 'block' ;
+            document.documentElement.style.visibility = 'visible' ;
+        } else {
+            top.location=self.location;
+        }
+	</script>
+	
+</head>
+
+<body class="<!--__FUEL_MARKER__0-->Body Class">
+
+	<!-- Header -->
+	<header id="header" class="gradient hide-for-small">									
+		
+		<div id="header-bg-right" class="gradient-header-blue gradient"></div>
+					
+		<section id="header-content" class="row gradient">					
+									
+			<div class="two columns">
+				
+				<!-- Logo -->
+				<a id="logo" href="https://www.citibikenyc.com/">
+					<img src="/assets/images/header-logo.png" alt="Citi Bike - Operated by NYC Bike Share" />								
+				</a>
+				
+			</div>
+						
+			<div class="ten columns">
+				
+				<div class="row">
+					<div class="twelve columns">
+						
+						<!-- Secondary Navigation -->
+						<div id="subnav">
+							
+							<nav id="secondary" class="horizontal">                 		
+				        		
+<ul>
+	<li class="first"><a href="https://www.citibikenyc.com/store" title="Gift Store">Gift Store</a></li>
+	<li><a href="https://www.citibikenyc.com/about" title="About">About</a></li>
+	<li><a href="https://www.citibikenyc.com/faq" title="FAQ">FAQ</a></li>
+	<li><a href="https://www.citibikenyc.com/get-the-app" title="Get The App">Get The App</a></li>
+	<li><a href="https://www.citibikenyc.com/meet-the-bike" title="Meet The Bike">Meet The Bike</a></li>
+	<li><a href="http://citibikeblog.tumblr.com/"target="_blank" title="Blog">Blog</a></li>
+	<li><a href="https://www.citibikenyc.com/events" title="Events">Events</a></li>
+	<li><a href="https://www.citibikenyc.com/jobs" title="Jobs">Jobs</a></li>
+	<li><a href="https://www.citibikenyc.com/system-data" title="System Data">System Data</a></li>
+	<li class="last"><a href="https://www.citibikenyc.com/contact" title="Contact">Contact</a></li>
+</ul>
+	        			        		   	                		    		               	            
+				            </nav>
+				            
+				            <nav id="signup-member" class="horizontal">
+				            	<ul>
+				            						            			<li class="active"><a href="https://www.citibikenyc.com/member/profile">Profile</a></li>
+				        				<li><a href="https://www.citibikenyc.com/login/logout">Logout</a></li>		            					            			
+				        			    					    								                	
+				            	</ul>  
+				            </nav>
+				            
+						</div>
+								
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="twelve columns">
+						
+						<!-- Main Navigation -->
+				        <div id="mainnav">
+				        	
+				        	<nav id="primary" class="horizontal margin-right--4 margin-top--1">    		
+					        	
+<ul>
+	<li class="first"><a href="https://www.citibikenyc.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li><a href="https://www.citibikenyc.com/stations" title="Station Map">Station Map</a></li>
+	<li><a href="https://www.citibikenyc.com/pricing" title="Pricing">Pricing</a></li>
+	<li><a href="https://www.citibikenyc.com/riding-tips" title="Riding Tips">Riding Tips</a></li>
+	<li class="last"><a href="https://www.citibikenyc.com/resources" title="Resources">Resources</a></li>
+</ul>
+     		        	            
+					        </nav>
+					        
+				        	<!-- Social Media -->  
+				        	<nav id="social" class="horizontal">
+				        		<ul>
+				        			<li>
+				        				<a id="facebook" href="http://facebook.com/CitiBikeNYC" target="_blank" title="Find Us on Facebook"></a>
+				        			</li>
+				        			<li>
+				        				<a id="twitter" href="http://twitter.com/#!/CitiBikeNYC" target="_blank" title="Follow Us On Twitter!"></a>	
+				        			</li>	        			
+				        		</ul>
+				        	</nav>   
+				    		 
+				        </div>
+						
+					</div>
+				</div>				            		         			      							
+		        
+			</div>
+		
+		</section>	         									
+
+	</header>	
+	
+	<!-- Header (Small) -->
+	<header id="header-small" class="show-for-small padding-10" style="background: #005DAB; ">		
+		<div class="row margin-bottom-10">
+			<div class="gutter-5">						
+				<div class="mobile-one column">
+					<div class="gutter">
+						<a href="https://www.citibikenyc.com/">
+							<img src="/assets/images/citibike-logo.png" alt="Citi Bike - Operated by NYC Bike Share" />								
+						</a>
+						<ul class="inline" style="position:relative; top:5px; left:15px; ">
+							<li>
+								<a id="facebook" href="http://facebook.com/CitiBikeNYC" target="_blank" title="Find Us on Facebook">
+									<img src="/assets/images/apps/facebook.png" />		    					
+								</a>
+							</li>
+							<li>
+								<a id="twitter" href="http://twitter.com/#!/CitiBikeNYC" target="_blank" title="Follow Us On Twitter!">
+									<img src="/assets/images/apps/twitter.png" />
+								</a>	
+							</li>	        			
+						</ul>
+					</div>				
+				</div>
+				<div class="mobile-three column">
+					<div class="gutter">
+						<nav>                 								
+							<ul class="button-group right">
+				        						        			<li class="active"><a class="tiny button radius" href="https://www.citibikenyc.com/member/profile">Profile</a></li>
+				    				<li><a class="tiny button" href="https://www.citibikenyc.com/login/logout">Logout</a></li>		            					            			
+				    			    		    				
+				            	<li id="join" ><a data-click-tracker="nav-mobile-signup" class="tiny button radius" href="https://www.citibikenyc.com/signup">Sign Up</a></li>
+				        	</ul>		        	     			        		   	                		    		               	           
+				        </nav>
+					</div>						       
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="gutter-10">
+				<div class="mobile-two columns">
+					<div class="gutter">
+						<nav id="primary-small">
+				        	
+<ul>
+	<li class="first medium button"><a href="https://www.citibikenyc.com/how-it-works" title="How It Works">How It Works</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/stations" title="Station Map">Station Map</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/pricing" title="Pricing">Pricing</a></li>
+	<li class="medium button"><a href="https://www.citibikenyc.com/riding-tips" title="Riding Tips">Riding Tips</a></li>
+	<li class="last medium button"><a href="https://www.citibikenyc.com/resources" title="Resources">Resources</a></li>
+</ul>
+     		        	            
+				        </nav>
+					</div>					
+				</div>
+				<div class="mobile-two columns">
+					<div class="gutter">
+						<nav id="secondary-small">
+							
+<ul>
+	<li class="first tiny button"><a href="https://www.citibikenyc.com/store" title="Gift Store">Gift Store</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/about" title="About">About</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/faq" title="FAQ">FAQ</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/get-the-app" title="Get The App">Get The App</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/meet-the-bike" title="Meet The Bike">Meet The Bike</a></li>
+	<li class="tiny button"><a href="http://citibikeblog.tumblr.com/"target="_blank" title="Blog">Blog</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/events" title="Events">Events</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/jobs" title="Jobs">Jobs</a></li>
+	<li class="tiny button"><a href="https://www.citibikenyc.com/system-data" title="System Data">System Data</a></li>
+	<li class="last tiny button"><a href="https://www.citibikenyc.com/contact" title="Contact">Contact</a></li>
+</ul>
+			
+						</nav>
+					</div>					
+				</div>
+			</div>					
+		</div>
+	</header>			<section class="row padding-top-20">
+	<div class="twelve columns centered text-center">
+		<nav id="member" class="horizontal margin-bottom-20"> 
+		   <ul class="button-group">
+                <li ><a class="button" href="https://www.citibikenyc.com/member/profile">Profile</a></li>                            
+                <li ><a class="button" href="https://www.citibikenyc.com/member/billing">Billing</a></li>
+                <li ><a class="button" href="https://www.citibikenyc.com/member/payments">Payments</a></li>
+                <li  class="active"><a class="button" href="https://www.citibikenyc.com/member/trips">Trips</a></li>                           
+                <li ><a class="button" href="https://www.citibikenyc.com/member/activate_bike_key">Bike Key</a></li>                                        
+            </ul>          			        		   	                		    		               	            
+		</nav>
+	</div>	
+</section>
+<section id="content" class="row margin-bottom-30">
+	<div class="twelve columns centered">
+
+        
+            <!-- Initialize Pagination -->
+                
+            <div class="row">
+              <div class="seven mobile-two columns"><h2>May 28, 2013 - May 31, 2013</h2></div>
+              <div class="five mobile-two columns text-right"><h2>Trips: 4 (306 Total)</h1></div>
+            </div>
+    
+            <!-- Trips Table -->
+            <table id="tripTable">     
+                <thead>
+                    <tr>
+                        <th>Trip ID</th>
+                        <th>Start Station</th>
+                        <th>Start Time</th>
+                        <th>End Station</th>
+                        <th>End Time</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <!-- To use the data attributes below, check out the pages below. 
+                         Also please note that the hyphenated attribute name becomes camel-cased: data-start-station-id to startStationId:
+                          - http://api.jquery.com/data/#data-html5
+                          - http://ejohn.org/blog/html-5-data-attributes/
+                          - http://www.w3.org/html/wg/drafts/html/master/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
+                         -->  
+                    
+                                
+                            <tr class="trip" id="trip-93749"
+                                data-start-station-id="366" 
+                                data-start-timestamp="1370040435" 
+                                data-end-station-id="357" 
+                                data-end-timestamp="1370109802" 
+                                data-duration-seconds="69367" >
+                                <td>93749</td>
+                                <td><i>Trip Completed</i></td>
+                                <td>5/31/13 6:47:15 PM</td>
+                                <td>E 11 St & Broadway</td>
+                                <td>6/1/13 2:03:22 PM</td>
+                                <td>19h 16m 7s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-85475"
+                                data-start-station-id="279" 
+                                data-start-timestamp="1370021724" 
+                                data-end-station-id="457" 
+                                data-end-timestamp="1370021940" 
+                                data-duration-seconds="216" >
+                                <td>85475</td>
+                                <td><i>Trip Completed</i></td>
+                                <td>5/31/13 1:35:24 PM</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>5/31/13 1:39:00 PM</td>
+                                <td>3m 36s</td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-81952"
+                                data-start-station-id="318" 
+                                data-start-timestamp="1370003292" 
+                                data-end-station-id="318" 
+                                data-end-timestamp="" 
+                                data-duration-seconds="1" >
+                                <td>81952</td>
+                                <td>E 43 St & Vanderbilt Ave</td>
+                                <td>5/31/13 8:28:12 AM</td>
+                                <td><i>Trip Completed</i></td>
+                                <td><i>Trip Completed</i></td>
+                                <td></td>
+                            </tr>
+        
+                                
+                            <tr class="trip" id="trip-62652"
+                                data-start-station-id="457" 
+                                data-start-timestamp="1369869537" 
+                                data-end-station-id="508" 
+                                data-end-timestamp="1369871289" 
+                                data-duration-seconds="1752" >
+                                <td>62652</td>
+                                <td>6 Ave & Canal St</td>
+                                <td>5/29/13 7:18:57 PM</td>
+                                <td>W 46 St & 11 Ave</td>
+                                <td>5/29/13 7:48:09 PM</td>
+                                <td>29m 12s</td>
+                            </tr>
+        
+                        
+                                    </tbody>        
+            </table>
+            <!-- Pagination -->
+                            <nav class="pagination">Page: <a href="https://www.citibikenyc.com/member/trips" data-ci-pagination-page="1">&lsaquo; First</a>&nbsp;&nbsp;<a href="https://www.citibikenyc.com/member/trips/14" data-ci-pagination-page="14">&lt;</a>&nbsp;<a href="https://www.citibikenyc.com/member/trips/13" data-ci-pagination-page="13">13</a>&nbsp;<a href="https://www.citibikenyc.com/member/trips/14" data-ci-pagination-page="14">14</a>&nbsp;<strong>15</strong></nav>
+                                                    
+            
+        
+	</div>
+</section>	    		    
+
+	<!-- Footer -->
+	<footer id="footer" class="row">
+	    	
+    	<hr id="divider" />
+    	
+    	<section id="copyright" class="eight columns centered">  
+    		<!--__FUEL_MARKER__1--><p>Use of this Website constitutes acceptance of the website <a href="/assets/pdf/terms-of-use.pdf">Terms of Use Agreement</a> and <a href="https://www.citibikenyc.com/privacy">Privacy Policy</a>.
+<p>
+	© Copyright 2013 - 2014 NYC Bike Share, LLC. All rights reserved.<br />
+	Citi, Citi with Arc Design and Citi Bike are registered service marks of Citigroup, Inc
+</p>              	            	
+        </section>
+	        
+	</footer>
+	
+	<!-- Miscellanous content like modal dialogs -->
+	
+    <!-- Current Environment: production -->
+
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write("<script src='/assets/js/foundation3/jquery.js'>\x3C/script>")</script>
+	
+	<!-- Foundation Javascript -->
+	<script src="/assets/js/foundation3/foundation.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/foundation3/app.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- jQuery Plugins that only load where appropriate -->
+		
+	<!-- Auto-Load any Javascript specific to a page by its URL only if it exists -->
+	
+    <!-- Load the signup JS if we're on the renewal page -->
+        
+        	
+	<!-- Final custom JS Calls (keep this below all other javascript files) -->
+	<script src="/assets/js/css_browser_selector.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.cookie.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.scrollTo.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/jquery.localScroll.min.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/nyc.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/jquery.fancybox.pack.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-media.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	<script src="/assets/js/fancybox/helpers/jquery.fancybox-thumbs.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+		
+	<!-- Analytics -->
+	<script src="/assets/js/google-analytics.js?c=-62169966000" type="text/javascript" charset="utf-8"></script>
+	 
+
+</body>
+</html>
