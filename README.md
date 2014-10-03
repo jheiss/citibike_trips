@@ -21,13 +21,13 @@ Or install it yourself as:
 Each trip has a unique id, start station, end station, start timestamp and end timestamp.  The stations will be an instance of CitibikeTrips::Station.
 
     trips = CitibikeTrips::Trips.new
-    puts trips.trips.length
     puts trips.first.start_station.name
     puts trips.first.end_timestamp
+    trips.each{|trip| puts trip.id}
 
     stations = CitibikeTrips::Stations.new
-    puts stations.stations.length
     puts stations[72].name
+    stations.each{|id, station| puts station.name}
 
 ## Contributing
 

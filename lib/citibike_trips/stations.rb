@@ -1,4 +1,7 @@
+require 'json'
+
 class CitibikeTrips::Stations
+  include Enumerable
   STATIONS_URL = 'https://www.citibikenyc.com/stations/json'
   
   attr_reader :timestamp, :stations
@@ -17,5 +20,11 @@ class CitibikeTrips::Stations
   
   def [](id)
     @stations[id]
+  end
+  def each(&block)
+    @stations.each(&block)
+  end
+  def to_json(*a)
+    @stations.to_json(*a)
   end
 end

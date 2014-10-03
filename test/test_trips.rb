@@ -3,7 +3,7 @@ require 'mocha/test_unit'
 require 'citibike_trips'
 
 class TripsTests < Test::Unit::TestCase
-  def test_initialize
+  def setup
     agent = Mechanize.new
     uri1 = 'https://www.citibikenyc.com/member/trips'
     uri2 = 'https://www.citibikenyc.com/member/trips/2'
@@ -25,14 +25,38 @@ class TripsTests < Test::Unit::TestCase
     json = File.read("#{File.dirname(__FILE__)}/samples/stations.json")
     page.stubs(:body).returns(json)
     
-    trips = CitibikeTrips::Trips.new
+    @trips = CitibikeTrips::Trips.new
+  end
+
+  def test_initialize
     # 26+20+4
-    assert_equal 50, trips.trips.length
-    trips.trips.each do |t|
+    assert_equal 50, @trips.trips.length
+    @trips.trips.each do |t|
       assert_kind_of CitibikeTrips::Trip, t
     end
-    assert_equal 'trip-13150976', trips.trips.first.id
-    assert_equal Time.at(1369869537), trips.trips.last.start_timestamp
-    assert_equal 'Broadway & W 58 St', trips.trips.last.start_station.name
+    assert_equal 'trip-13150976', @trips.trips.first.id
+    assert_equal Time.at(1369869537), @trips.trips.last.start_timestamp
+    assert_equal 'Broadway & W 58 St', @trips.trips.last.start_station.name
+  end
+  def test_index_access
+    assert_equal 'trip-13150976', @trips[0].id
+    assert_equal 'Broadway & W 58 St', @trips[-1].start_station.name
+  end
+  def test_each
+    count = 0
+    @trips.each{|trip| count += 1}
+    assert_equal 50, count
+  end
+  def test_includes_enumerable
+    assert @trips.any?{|trip| trip.id == 'trip-13150976'}
+    assert @trips.all?{|trip| trip.id}
+  end
+  def test_to_json
+    json = @trips.to_json
+    assert_kind_of String, json
+    data = JSON.parse(json)
+    assert_equal 50, data.length
+    assert_equal 'trip-13150976', data[0]['id']
+    assert_equal 'Broadway & W 58 St', data[-1]['start_station']['name']
   end
 end

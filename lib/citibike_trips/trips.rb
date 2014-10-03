@@ -1,9 +1,12 @@
+require 'json'
+
 class CitibikeTrips::Trips
+  include Enumerable
   TRIPS_URL = 'https://www.citibikenyc.com/member/trips'
   
   attr_reader :trips
   
-  def initialize
+  def initialize(options={})
     agent = Mechanize.new
     @trips = []
     url = TRIPS_URL
@@ -24,10 +27,20 @@ class CitibikeTrips::Trips
           break
         end
       elsif page.uri.to_s == CitibikeTrips::LOGIN_URL
-        CitibikeTrips.login(page)
+        CitibikeTrips.login(page, {stdout: options[:stdout]})
       else
         raise "Got redirected to unexpected page #{page.uri.to_s}"
       end
     end
+  end
+
+  def [](index)
+    @trips[index]
+  end
+  def each(&block)
+    @trips.each(&block)
+  end
+  def to_json(*a)
+    @trips.to_json(*a)
   end
 end

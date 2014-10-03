@@ -1,3 +1,5 @@
+require 'json'
+
 class CitibikeTrips::Station
   attr_reader :id, :name,
     :available_docks, :total_docks, :available_bikes,
@@ -33,5 +35,8 @@ class CitibikeTrips::Station
     @test_station = data['testStation']
     @last_communication_time = data['lastCommunicationTime']
     @landmark = data['landMark']
+  end
+  def to_json(*a)
+    Hash[instance_variables.collect{|i| [i[1..-1], instance_variable_get(i)]}].to_json(*a)
   end
 end

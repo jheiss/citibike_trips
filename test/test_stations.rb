@@ -22,4 +22,21 @@ class StationsTests < Test::Unit::TestCase
     assert_equal 'W 52 St & 11 Ave', @stations[72].name
     assert_equal 20, @stations[3002].available_docks
   end
+  def test_each
+    count = 0
+    @stations.each{|id, station| count += 1}
+    assert_equal 332, count
+  end
+  def test_includes_enumerable
+    assert @stations.any?{|id, station| id == 72 && station.name == 'W 52 St & 11 Ave'}
+    assert @stations.all?{|id, station| station.name}
+  end
+  def test_to_json
+    json = @stations.to_json
+    assert_kind_of String, json
+    data = JSON.parse(json)
+    assert_equal 332, data.length
+    assert_equal 'W 52 St & 11 Ave', data['72']['name']
+    assert_equal 20, data['3002']['available_docks']
+  end
 end

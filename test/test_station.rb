@@ -22,20 +22,32 @@ class StationTests < Test::Unit::TestCase
       "testStation"=>false,
       "lastCommunicationTime"=>nil,
       "landMark"=>""}
+    @station = CitibikeTrips::Station.new(@data)
   end
 
   def test_initialize
-    station = CitibikeTrips::Station.new(@data)
     # Some regular fields
-    assert_equal 72, station.id
-    assert_equal 'W 52 St & 11 Ave', station.name
-    assert_equal false, station.test_station
+    assert_equal 72, @station.id
+    assert_equal 'W 52 St & 11 Ave', @station.name
+    assert_equal false, @station.test_station
     # Test conversion of empty string values to nil
-    assert_nil station.location
+    assert_nil @station.location
     # Test special handling of city
-    assert_equal 'New York', station.city
+    assert_equal 'New York', @station.city
     # Virtual fields
-    assert_equal ['W 52 St & 11 Ave'], station.street_address_array
-    assert_equal 'W 52 St & 11 Ave', station.street_address
+    assert_equal ['W 52 St & 11 Ave'], @station.street_address_array
+    assert_equal 'W 52 St & 11 Ave', @station.street_address
+  end
+  def test_to_json
+    json = @station.to_json
+    assert_kind_of String, json
+    data = JSON.parse(json)
+    assert_equal 72, data['id']
+    assert_equal 'W 52 St & 11 Ave', data['name']
+    assert_equal false, data['test_station']
+    assert_nil data['location']
+    assert_equal 'New York', data['city']
+    assert_equal ['W 52 St & 11 Ave'], data['street_address_array']
+    assert_equal 'W 52 St & 11 Ave', data['street_address']
   end
 end
